@@ -1,6 +1,6 @@
 import { App } from "cdktf";
-import { CodeServerStack } from "./src/code-server";
+import { ElasticsearchStack } from "./src/elasticsearch";
 
 const app = new App();
-new CodeServerStack(app, "code-server-on-openstack");
+new ElasticsearchStack(app, "elasticsearch-on-openstack");
 app.synth();

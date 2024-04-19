@@ -11,16 +11,26 @@
     "excludeStackIdFromLogicalIds": "true",
     "allowSepCharsInLogicalIds": "true",
     "serverConfig": {
-      "serverName": "code-server",
-      "imageUuid": "ac0d794a-2067-43ed-b726-af10ae0814b5",
-      "flavorName": "p1.2xlarge",
-      "keyPairName": "bbrfkr",
-      "securityGroupNames": [
-        "allow-all"
-      ],
-      "bootNetworkName": "common",
-      "bootVolumeSize": 50,
-      "dataVolumeUuid": "15a69af7-95a3-4496-9fd1-2b54426e0e35"
+      "masterNodes": {
+        "serverCount": 3,
+        "imageUuid": "ac0d794a-2067-43ed-b726-af10ae0814b5",
+        "flavorName": "g1.medium",
+        "keyPairName": "bbrfkr",
+        "securityGroupIds": [
+          "115bd8b2-5a7d-4fbc-baea-37fe94226f90"
+        ],
+        "bootNetworkId": "1056626c-dd58-4771-9869-8b07967d213c"
+      },
+      "dataNodes": {
+        "serverCount": 5,
+        "imageUuid": "ac0d794a-2067-43ed-b726-af10ae0814b5",
+        "flavorName": "g1.medium",
+        "keyPairName": "bbrfkr",
+        "securityGroupIds": [
+          "115bd8b2-5a7d-4fbc-baea-37fe94226f90"
+        ],
+        "bootNetworkId": "1056626c-dd58-4771-9869-8b07967d213c"
+      }
     }
   }
 }
